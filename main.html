@@ -1,0 +1,692 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>— | Freelance Editor &amp; Designer</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.highlight-default_background {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.highlight-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.block-color-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: undefined; }
+.select-value-color-pink { background-color: rgba(225, 136, 179, 0.27); }
+.select-value-color-purple { background-color: rgba(168, 129, 197, 0.27); }
+.select-value-color-green { background-color: rgba(123, 183, 129, 0.27); }
+.select-value-color-gray { background-color: rgba(84, 72, 49, 0.15); }
+.select-value-color-translucentGray { background-color: undefined; }
+.select-value-color-orange { background-color: rgba(224, 124, 57, 0.27); }
+.select-value-color-brown { background-color: rgba(210, 162, 141, 0.35); }
+.select-value-color-red { background-color: rgba(244, 171, 159, 0.4); }
+.select-value-color-yellow { background-color: rgba(236, 191, 66, 0.39); }
+.select-value-color-blue { background-color: rgba(93, 165, 206, 0.27); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="1f5ddcaf-ff7b-8031-97b4-d909812fa0be" class="page sans"><header><img class="page-cover-image" src="https://images.unsplash.com/photo-1490810194309-344b3661ba39?ixlib=rb-4.1.0&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb" style="object-position:center 38.29%"/><h1 class="page-title">— | Freelance Editor &amp; Designer</h1><p class="page-description"></p></header><div class="page-body"><div id="1f5ddcaf-ff7b-816b-853f-f3695b7a0a3c" class="column-list"><div id="1f5ddcaf-ff7b-81cc-8f03-ec39d82683aa" style="width:25%" class="column"><figure id="1f5ddcaf-ff7b-816f-aed9-f06aab7cb77e" class="image"><a href="3f80946f-c861-41b9-981c-cfe210427ac8.png"><img style="width:330.6765523632993px" src="3f80946f-c861-41b9-981c-cfe210427ac8.png"/></a></figure><h1 id="1f5ddcaf-ff7b-8198-8099-ff75c27410aa" class="">My Services</h1><hr id="1f5ddcaf-ff7b-819f-89aa-dea0806cf22a"/><div id="1f5ddcaf-ff7b-81fe-a942-c5a7bae83eeb" class="collection-content"><h4 class="collection-title">Services</h4><table class="collection-content"><thead><tr><th><span class="icon property-icon"><svg aria-hidden="true" role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(71, 70, 68, 0.6);flex-shrink:0" class="typesTitle"><path d="M0.637695 13.1914C1.0957 13.1914 1.32812 13 1.47852 12.5215L2.24414 10.3887H6.14746L6.90625 12.5215C7.05664 13 7.2959 13.1914 7.74707 13.1914C8.22559 13.1914 8.5332 12.9043 8.5332 12.4531C8.5332 12.2891 8.50586 12.1523 8.44434 11.9678L5.41602 3.79199C5.2041 3.21777 4.82129 2.9375 4.19922 2.9375C3.60449 2.9375 3.21484 3.21777 3.0166 3.78516L-0.0322266 12.002C-0.09375 12.1797 -0.121094 12.3232 -0.121094 12.4668C-0.121094 12.918 0.166016 13.1914 0.637695 13.1914ZM2.63379 9.12402L4.17871 4.68066H4.21973L5.76465 9.12402H2.63379ZM12.2793 13.2324C13.3115 13.2324 14.2891 12.6787 14.7129 11.8037H14.7402V12.5762C14.7471 12.9863 15.0273 13.2393 15.4238 13.2393C15.834 13.2393 16.1143 12.9795 16.1143 12.5215V8.00977C16.1143 6.49902 14.9658 5.52148 13.1543 5.52148C11.7666 5.52148 10.6592 6.08887 10.2695 6.99121C10.1943 7.15527 10.1533 7.3125 10.1533 7.46289C10.1533 7.81152 10.4062 8.04395 10.7686 8.04395C11.0215 8.04395 11.2129 7.94824 11.3496 7.73633C11.7529 6.99121 12.2861 6.65625 13.1064 6.65625C14.0977 6.65625 14.6992 7.20996 14.6992 8.1123V8.67285L12.5664 8.7959C10.7686 8.8916 9.77734 9.69824 9.77734 11.0107C9.77734 12.3369 10.8096 13.2324 12.2793 13.2324ZM12.6621 12.1387C11.8008 12.1387 11.2129 11.667 11.2129 10.9561C11.2129 10.2725 11.7598 9.82129 12.7578 9.75977L14.6992 9.62988V10.3203C14.6992 11.3457 13.7969 12.1387 12.6621 12.1387Z"></path></svg></span>Name</th></tr></thead><tbody><tr id="1f5ddcaf-ff7b-819a-8e65-c91abc4badd4"><td class="cell-title"><a href="https://www.notion.so/Video-Editing-1f5ddcafff7b819a8e65c91abc4badd4?pvs=21"><img class="icon" src="https://www.notion.so/icons/preview_orange.svg"/>Video Editing</a></td></tr><tr id="1f5ddcaf-ff7b-8081-b742-f245ca088400"><td class="cell-title"><a href="https://www.notion.so/Motion-Graphics-1f5ddcafff7b8081b742f245ca088400?pvs=21"><img class="icon" src="https://www.notion.so/icons/timeline_red.svg"/>Motion Graphics</a></td></tr><tr id="1f5ddcaf-ff7b-8117-8e27-feb3fba563c0"><td class="cell-title"><a href="https://www.notion.so/Video-Ads-1f5ddcafff7b81178e27feb3fba563c0?pvs=21"><img class="icon" src="https://www.notion.so/icons/playback-play-button_pink.svg"/>Video Ads</a></td></tr><tr id="1f5ddcaf-ff7b-81bc-94cd-cc91ec5247f0"><td class="cell-title"><a href="https://www.notion.so/Content-Creation-1f5ddcafff7b81bc94cdcc91ec5247f0?pvs=21"><img class="icon" src="https://www.notion.so/icons/movie-clapboard-play_purple.svg"/>Content Creation</a></td></tr><tr id="1f5ddcaf-ff7b-806a-9549-d414a5ef0098"><td class="cell-title"><a href="https://www.notion.so/Audio-Editing-1f5ddcafff7b806a9549d414a5ef0098?pvs=21"><img class="icon" src="https://www.notion.so/icons/headphones_green.svg"/>Audio Editing</a></td></tr><tr id="1f5ddcaf-ff7b-81a2-878b-da45b9d95a02"><td class="cell-title"><a href="https://www.notion.so/Content-Writing-Script-Writing-1f5ddcafff7b81a2878bda45b9d95a02?pvs=21"><img class="icon" src="https://www.notion.so/icons/compose_blue.svg"/>Content Writing + Script Writing</a></td></tr><tr id="1f5ddcaf-ff7b-81d5-8e93-d501bfb68ce6"><td class="cell-title"><a href="https://www.notion.so/Presentation-Designs-1f5ddcafff7b81d58e93d501bfb68ce6?pvs=21"><img class="icon" src="https://www.notion.so/icons/compose_red.svg"/>Presentation Designs</a></td></tr><tr id="1f5ddcaf-ff7b-8034-9f3e-cf88600bf1ca"><td class="cell-title"><a href="https://www.notion.so/Research-Fact-Check-1f5ddcafff7b80349f3ecf88600bf1ca?pvs=21"><img class="icon" src="https://www.notion.so/icons/paste_brown.svg"/>Research + Fact Check</a></td></tr><tr id="1f5ddcaf-ff7b-80b8-aa5e-c009a92fa899"><td class="cell-title"><a href="https://www.notion.so/Flyer-Poster-Designs-1f5ddcafff7b80b8aa5ec009a92fa899?pvs=21"><img class="icon" src="https://www.notion.so/icons/feed_yellow.svg"/>Flyer / Poster Designs</a></td></tr><tr id="1f5ddcaf-ff7b-8152-a718-ee7fe4ac3df6"><td class="cell-title"><a href="https://www.notion.so/Website-Designing-1f5ddcafff7b8152a718ee7fe4ac3df6?pvs=21"><img class="icon" src="https://www.notion.so/icons/kind_pink.svg"/>Website Designing</a></td></tr><tr id="1f5ddcaf-ff7b-8075-910c-e77c4030eec3"><td class="cell-title"><a href="https://www.notion.so/Subtitles-Captions-1f5ddcafff7b8075910ce77c4030eec3?pvs=21"><img class="icon" src="https://www.notion.so/icons/font_blue.svg"/>Subtitles &amp; Captions</a></td></tr></tbody></table><br/><br/></div><p id="1f5ddcaf-ff7b-8094-af4f-d469b1c91653" class="">
+</p></div><div id="1f5ddcaf-ff7b-8120-bf59-c2540ea47962" style="width:75%" class="column"><hr id="1f5ddcaf-ff7b-810e-abad-ec5fb4ea7305"/><h3 id="1f5ddcaf-ff7b-81f9-82b8-ef2bef83b812" class="">Hey! I’m a creative focused on impactful visual storytelling.</h3><h3 id="1f5ddcaf-ff7b-80a3-849e-eec30376cac1" class="">I specialize in high-energy video ads, smooth reels, stylish websites, and crisp presentations.</h3><h3 id="1f5ddcaf-ff7b-8030-abec-ec0e0d2ab89f" class="">I’m currently open for freelance work — A dedicated video editor &amp; Designer with a knack for transforming raw footage into compelling stories. Combining my graphic and visual designing skills to create an overall great experience.</h3><h3 id="1f5ddcaf-ff7b-8043-93a0-e757a89d4a3c" class="">Explore my work and see how I can bring your vision to life.</h3><div id="1f5ddcaf-ff7b-81b0-a3a5-c8d620b66959" class="column-list"><div id="1f5ddcaf-ff7b-8163-8953-fbdefbd21e86" style="width:300%" class="column"><figure class="block-color-default callout" style="white-space:pre-wrap;display:flex" id="1f5ddcaf-ff7b-81fa-84ff-fcc5b45fd34c"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/mail_gray.svg"/></div><div style="width:100%"><a href="mailto:azhar@domnify.com">Email</a></div></figure></div><div id="1f5ddcaf-ff7b-8194-9e70-d1896913633e" style="width:100%" class="column"><figure class="block-color-default callout" style="white-space:pre-wrap;display:flex" id="1f5ddcaf-ff7b-8143-9238-eea4e3f34d61"><div style="font-size:1.5em"><img class="icon" src="https://i.pinimg.com/736x/92/d1/db/92d1db1521d374335498624cc95e9554.jpg"/></div><div style="width:100%"><p id="1f5ddcaf-ff7b-818c-9cbf-ea3ca12b217a" class="">LinkedIn</p></div></figure></div><div id="1f5ddcaf-ff7b-811d-bb3f-c48027a0eb46" style="width:300%" class="column"><figure class="block-color-default callout" style="white-space:pre-wrap;display:flex" id="1f5ddcaf-ff7b-818d-9105-d4df82713420"><div style="font-size:1.5em"><img class="icon" src="git.png"/></div><div style="width:100%">Github</div></figure></div></div><hr id="1f5ddcaf-ff7b-817e-bc65-c1cebc907d34"/><h1 id="1f5ddcaf-ff7b-8160-a21a-daa60f14d08e" class="">Tools</h1><hr id="1f5ddcaf-ff7b-81fa-8c7b-d670cc8eaa95"/><div id="1f5ddcaf-ff7b-81d8-a223-ea3f5a298bc7" class="collection-content"><h4 class="collection-title">Tools</h4><table class="collection-content"><thead><tr><th><span class="icon property-icon"><svg aria-hidden="true" role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(71, 70, 68, 0.6);flex-shrink:0" class="typesTitle"><path d="M0.637695 13.1914C1.0957 13.1914 1.32812 13 1.47852 12.5215L2.24414 10.3887H6.14746L6.90625 12.5215C7.05664 13 7.2959 13.1914 7.74707 13.1914C8.22559 13.1914 8.5332 12.9043 8.5332 12.4531C8.5332 12.2891 8.50586 12.1523 8.44434 11.9678L5.41602 3.79199C5.2041 3.21777 4.82129 2.9375 4.19922 2.9375C3.60449 2.9375 3.21484 3.21777 3.0166 3.78516L-0.0322266 12.002C-0.09375 12.1797 -0.121094 12.3232 -0.121094 12.4668C-0.121094 12.918 0.166016 13.1914 0.637695 13.1914ZM2.63379 9.12402L4.17871 4.68066H4.21973L5.76465 9.12402H2.63379ZM12.2793 13.2324C13.3115 13.2324 14.2891 12.6787 14.7129 11.8037H14.7402V12.5762C14.7471 12.9863 15.0273 13.2393 15.4238 13.2393C15.834 13.2393 16.1143 12.9795 16.1143 12.5215V8.00977C16.1143 6.49902 14.9658 5.52148 13.1543 5.52148C11.7666 5.52148 10.6592 6.08887 10.2695 6.99121C10.1943 7.15527 10.1533 7.3125 10.1533 7.46289C10.1533 7.81152 10.4062 8.04395 10.7686 8.04395C11.0215 8.04395 11.2129 7.94824 11.3496 7.73633C11.7529 6.99121 12.2861 6.65625 13.1064 6.65625C14.0977 6.65625 14.6992 7.20996 14.6992 8.1123V8.67285L12.5664 8.7959C10.7686 8.8916 9.77734 9.69824 9.77734 11.0107C9.77734 12.3369 10.8096 13.2324 12.2793 13.2324ZM12.6621 12.1387C11.8008 12.1387 11.2129 11.667 11.2129 10.9561C11.2129 10.2725 11.7598 9.82129 12.7578 9.75977L14.6992 9.62988V10.3203C14.6992 11.3457 13.7969 12.1387 12.6621 12.1387Z"></path></svg></span>Name</th><th><span class="icon property-icon"><svg aria-hidden="true" role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(71, 70, 68, 0.6);flex-shrink:0" class="typesSelect"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM7.62402 10.6348C7.79492 10.915 8.20508 10.9287 8.37598 10.6348L10.666 6.73145C10.8574 6.41016 10.7002 6.04102 10.3652 6.04102H5.62793C5.29297 6.04102 5.14941 6.43066 5.32031 6.73145L7.62402 10.6348Z"></path></svg></span>Level of expertise</th></tr></thead><tbody><tr id="1f5ddcaf-ff7b-817f-be62-f6c048146891"><td class="cell-title"><a href="https://www.notion.so/Adobe-Premier-Pro-1f5ddcafff7b817fbe62f6c048146891?pvs=21"><img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Adobe_Premiere_Pro_CC_icon.svg/1200px-Adobe_Premiere_Pro_CC_icon.svg.png"/>Adobe Premier Pro</a></td><td class="cell-q?me"><span class="selected-value select-value-color-blue">Intermediate</span></td></tr><tr id="1f5ddcaf-ff7b-804f-8457-e7aec23baf95"><td class="cell-title"><a href="https://www.notion.so/Microsoft-PowerPoint-1f5ddcafff7b804f8457e7aec23baf95?pvs=21"><img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Microsoft_Office_PowerPoint_%282019%E2%80%93present%29.svg/1200px-Microsoft_Office_PowerPoint_%282019%E2%80%93present%29.svg.png"/>Microsoft PowerPoint</a></td><td class="cell-q?me"><span class="selected-value select-value-color-green">Expert</span></td></tr><tr id="1f5ddcaf-ff7b-80fa-ac51-d3076a0f1106"><td class="cell-title"><a href="https://www.notion.so/Google-Slides-1f5ddcafff7b80faac51d3076a0f1106?pvs=21"><img class="icon" src="https://blogs.shu.ac.uk/shutel/files/2014/08/GSlides.png"/>Google Slides</a></td><td class="cell-q?me"><span class="selected-value select-value-color-green">Expert</span></td></tr><tr id="1f5ddcaf-ff7b-8105-9670-d5f99c80c9d2"><td class="cell-title"><a href="https://www.notion.so/Canva-1f5ddcafff7b81059670d5f99c80c9d2?pvs=21"><img class="icon" src="https://carmentune.com/wp-content/uploads/Canva-logo.png"/>Canva</a></td><td class="cell-q?me"><span class="selected-value select-value-color-green">Expert</span></td></tr><tr id="1f5ddcaf-ff7b-8150-99bd-c1537839f979"><td class="cell-title"><a href="https://www.notion.so/Figma-1f5ddcafff7b815099bdc1537839f979?pvs=21"><img class="icon" src="https://zeroheight-wordpress-uploads.s3.amazonaws.com/wp-content/uploads/2022/11/small-icon_figma.png"/>Figma</a></td><td class="cell-q?me"><span class="selected-value select-value-color-blue">Intermediate</span></td></tr><tr id="1f5ddcaf-ff7b-80e1-b2cb-e3247e86183f"><td class="cell-title"><a href="https://www.notion.so/HTML5-1f5ddcafff7b80e1b2cbe3247e86183f?pvs=21"><img class="icon" src="https://cdn-icons-png.freepik.com/512/1051/1051277.png"/>HTML5</a></td><td class="cell-q?me"><span class="selected-value select-value-color-blue">Intermediate</span></td></tr><tr id="1f5ddcaf-ff7b-80a1-8ee8-c9e7421b80de"><td class="cell-title"><a href="https://www.notion.so/CSS3-1f5ddcafff7b80a18ee8c9e7421b80de?pvs=21"><img class="icon" src="https://cdn-icons-png.freepik.com/512/732/732190.png"/>CSS3</a></td><td class="cell-q?me"><span class="selected-value select-value-color-blue">Intermediate</span></td></tr><tr id="1f5ddcaf-ff7b-8087-9e45-e2ae00a81e74"><td class="cell-title"><a href="https://www.notion.so/Bootstrap-1f5ddcafff7b80879e45e2ae00a81e74?pvs=21"><img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1200px-Bootstrap_logo.svg.png"/>Bootstrap</a></td><td class="cell-q?me"><span class="selected-value select-value-color-blue">Intermediate</span></td></tr><tr id="1f5ddcaf-ff7b-8082-b676-e9cca53a1504"><td class="cell-title"><a href="https://www.notion.so/JavaScript-1f5ddcafff7b8082b676e9cca53a1504?pvs=21"><img class="icon" src="https://cdn-icons-png.freepik.com/512/5968/5968292.png"/>JavaScript</a></td><td class="cell-q?me"><span class="selected-value select-value-color-blue">Intermediate</span></td></tr><tr id="1f5ddcaf-ff7b-81b9-b8e4-c7e55a059249"><td class="cell-title"><a href="https://www.notion.so/WordPress-1f5ddcafff7b81b9b8e4c7e55a059249?pvs=21"><img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/WordPress_blue_logo.svg/1200px-WordPress_blue_logo.svg.png"/>WordPress</a></td><td class="cell-q?me"><span class="selected-value select-value-color-blue">Intermediate</span></td></tr></tbody></table><br/><br/></div><h1 id="1f5ddcaf-ff7b-818c-8ab8-f993338259b1" class="">Work Experience</h1><hr id="1f5ddcaf-ff7b-81f3-8e30-d897496671f2"/><figure class="block-color-purple callout" style="white-space:pre-wrap;display:flex" id="1f5ddcaf-ff7b-81bb-b13f-cb1fd70a8bff"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/tortoise_gray.svg"/></div><div style="width:100%"><mark class="highlight-red"><strong>Visual Designer<br/><br/></strong></mark>The New Studio <mark class="highlight-gray">(Apr 2023 - Till Now)<br/><br/>Working as a visual designer here, worked on many products and services and learned a lot about design standards. Worked on many apps and services in a very short period of time<br/></mark></div></figure><figure class="block-color-purple callout" style="white-space:pre-wrap;display:flex" id="1f5ddcaf-ff7b-8125-aa02-c748cd737efb"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/tortoise_gray.svg"/></div><div style="width:100%"><mark class="highlight-red"><strong>Visual Designer<br/><br/></strong></mark>The New Studio <mark class="highlight-gray">(Apr 2023 - Till Now)<br/><br/>Working as a visual designer here, worked on many products and services and learned a lot about design standards. Worked on many apps and services in a very short period of time<br/></mark></div></figure></div></div><hr id="1f5ddcaf-ff7b-8010-b999-f7920d3db9f9"/><h1 id="1f5ddcaf-ff7b-80ff-93e0-e2b99ed1fa23" class=""><mark class="highlight-default">Portfolio Video Editing &amp; Motion Design</mark></h1><h3 id="1f5ddcaf-ff7b-80ef-b186-fa4430695b04" class=""><mark class="highlight-brown">Long Form YouTube Videos</mark></h3><div id="1f5ddcaf-ff7b-80ff-bb5b-cdaf677a8c82" class="column-list"><div id="1f5ddcaf-ff7b-808e-8aa4-ff6dd7b7dc58" style="width:93.75%" class="column"><h3 id="1f5ddcaf-ff7b-8012-8895-d4cbb5341bef" class=""><strong>Talking Head Video</strong></h3><p id="1f5ddcaf-ff7b-80f6-a7b3-f50f91ba280d" class="">A scripted talking head video blending motivational storytelling with cinematic editing. The goal was to connect emotionally, build trust, and deliver clarity through words, pacing, and visuals.</p><p id="1f6ddcaf-ff7b-800c-903f-d7510f633dbd" class=""><strong>My Roles:</strong></p><ul id="1f6ddcaf-ff7b-8034-a03a-f5f558e822ab" class="bulleted-list"><li style="list-style-type:disc"><strong>Scripting</strong> – wrote an engaging and personal script that gradually builds from relatable frustration to motivation.</li></ul><ul id="1f6ddcaf-ff7b-80fb-b5ef-de00c7decc48" class="bulleted-list"><li style="list-style-type:disc"><strong>Editing</strong> – handled all cuts, transitions, and pacing to match tone shifts in the message.</li></ul><ul id="1f6ddcaf-ff7b-801a-8f43-db86145651af" class="bulleted-list"><li style="list-style-type:disc"><strong>Overlay Design</strong> – used text overlays and subtle animations to emphasize key phrases.</li></ul><ul id="1f6ddcaf-ff7b-8083-9897-cf418bfe38ac" class="bulleted-list"><li style="list-style-type:disc"><strong>Sound Design</strong> – selected impactful music to underscore shifts in emotion and energy.</li></ul><ul id="1f6ddcaf-ff7b-807e-b699-cb58812b449c" class="bulleted-list"><li style="list-style-type:disc">Motion Graphics – crafted minimal kinetic text and animated elements to elevate key moments and keep visual flow engaging.</li></ul><p id="1f6ddcaf-ff7b-8010-b9b2-e0526d77c5dc" class=""><strong>Challenges Faced:</strong></p><ul id="1f6ddcaf-ff7b-80bd-b9ef-e9e10c6e6a76" class="bulleted-list"><li style="list-style-type:disc">Holding attention in a single-frame setup while keeping the pace dynamic.</li></ul><ul id="1f6ddcaf-ff7b-8089-90b1-c75189f28df7" class="bulleted-list"><li style="list-style-type:disc">Delivering an emotionally layered script without sounding rehearsed.</li></ul><p id="1f6ddcaf-ff7b-800b-b803-dba0910dbb9c" class="">
+</p><figure id="1f6ddcaf-ff7b-8010-b6d9-ca1105137c43" class="image"><a href="Screenshot_(204).png"><img style="width:620.6875px" src="Screenshot_(204).png"/></a></figure><h3 id="1f5ddcaf-ff7b-8002-8e06-f45c58e7b8ad" class="">Music Video</h3><p id="1f5ddcaf-ff7b-809e-a359-eab3b87ab598" class="">I edited a music video focused on visual rhythm, and emotional pacing. My role was to mashup the 3 songs and then take raw movie footage and craft it into a polished, engaging video that matched the song’s style and beat.</p><p id="1f6ddcaf-ff7b-8068-a577-e985c6df8839" class=""><strong>My Role:</strong></p><ul id="1f6ddcaf-ff7b-8079-99eb-d7237c5f8cb4" class="bulleted-list"><li style="list-style-type:disc">Full editing (cutting, syncing, framing)</li></ul><ul id="1f6ddcaf-ff7b-80b3-aab6-edfa38668f41" class="bulleted-list"><li style="list-style-type:disc">Built motion-based transitions to match the track</li></ul><ul id="1f6ddcaf-ff7b-8096-9996-e098332f8d14" class="bulleted-list"><li style="list-style-type:disc">Audio Editing (mashing up 3 different songs to create one)</li></ul><p id="1f6ddcaf-ff7b-8031-9895-f05e490933a5" class=""><strong>Challenges Faced:</strong></p><ul id="1f6ddcaf-ff7b-80af-9f6e-f4bffa995080" class="bulleted-list"><li style="list-style-type:disc">Audio didn’t align perfectly with initial takes</li></ul><ul id="1f6ddcaf-ff7b-80d1-9f4a-e1e2b0bfb503" class="bulleted-list"><li style="list-style-type:disc">Needed to maintain viewer attention for a 3+ minute runtime</li></ul><p id="1f6ddcaf-ff7b-804c-95c8-ee0834f91631" class="">
+</p><figure id="1f5ddcaf-ff7b-8070-b62e-dc82bdbdb582"><div class="source"><a href="https://youtu.be/_l_MTVdis5Q">https://youtu.be/_l_MTVdis5Q</a></div></figure></div><div id="1f5ddcaf-ff7b-80b4-9237-ea75572f9f05" style="width:100%" class="column"><figure id="1f5ddcaf-ff7b-808e-8f97-fedac788d515"><div class="source"><a href="https://youtu.be/sLgHqZSe2o0">https://youtu.be/sLgHqZSe2o0</a></div></figure><h3 id="1f5ddcaf-ff7b-808f-a472-f8dab0c82964" class="">Video Ad</h3><p id="1f5ddcaf-ff7b-8001-acad-cc8875b3f6b1" class="">This was a clean, 20-second video ad designed in a minimalistic style for YouTube. The objective was to present a product/message with clarity and elegance, using clean visuals, smooth transitions, and on-brand motion graphics — all within a tight runtime.</p><p id="1f6ddcaf-ff7b-8083-9dd1-d1d294fa1212" class=""><strong>My Roles:</strong></p><ul id="1f6ddcaf-ff7b-8008-ba00-ca2022c5d75b" class="bulleted-list"><li style="list-style-type:disc"><strong>Concept </strong>– developed the core message and structure for the short format.</li></ul><ul id="1f6ddcaf-ff7b-800c-956f-d1da2ded6d26" class="bulleted-list"><li style="list-style-type:disc"><strong>Visual Design</strong> – created a minimal, elegant aesthetic with bold typography and negative space.</li></ul><ul id="1f6ddcaf-ff7b-8066-88ae-f5cbfe01745f" class="bulleted-list"><li style="list-style-type:disc"><strong>Motion Graphics &amp; Animation</strong> – animated elements with smooth, professional transitions.</li></ul><ul id="1f6ddcaf-ff7b-80b9-9a37-d75907cc5fc6" class="bulleted-list"><li style="list-style-type:disc"><strong>Editing</strong> – ensured pacing matched the ad&#x27;s tone: sleek, sharp, and focused.</li></ul><ul id="1f6ddcaf-ff7b-808d-ae03-f9a13946aaee" class="bulleted-list"><li style="list-style-type:disc"><strong>Sound Design</strong> – layered subtle sound cues and background music to enhance polish.</li></ul><p id="1f6ddcaf-ff7b-8096-adf1-e745e146d883" class=""><strong>Challenges Faced:</strong></p><ul id="1f6ddcaf-ff7b-80b5-a855-f3fb7131eeb6" class="bulleted-list"><li style="list-style-type:disc">Delivering impact in just 20 seconds without cluttering the screen or overloading visuals.</li></ul><ul id="1f6ddcaf-ff7b-804c-8a59-f7546ef3505f" class="bulleted-list"><li style="list-style-type:disc">Balancing minimalism with attention-grabbing elements to maintain viewer interest.</li></ul><p id="1f5ddcaf-ff7b-80fa-b2ce-ff3afefcd239" class="">
+</p><figure id="1f5ddcaf-ff7b-802f-a244-f39eb3f2b974"><div class="source"><a href="https://youtu.be/jUuw0yIf594?si=T6J81qeZaswy6MPh">https://youtu.be/jUuw0yIf594?si=T6J81qeZaswy6MPh</a></div></figure><h3 id="1f5ddcaf-ff7b-8095-9ed7-dbd6fb9a575c" class="">Narrative Video</h3><p id="1f5ddcaf-ff7b-807e-a985-ff52da11c744" class="">The rise, impact, and evolution of legendary Indian YouTuber <em>BeastBoyShub</em>. My goal was to blend nostalgic storytelling with visual edits that captured both his comedic brilliance and emotional depth.</p><p id="1f6ddcaf-ff7b-8045-9481-d5ec61d86595" class=""><strong>My Role:</strong></p><ul id="1f6ddcaf-ff7b-80dd-aa35-c2a11fcdaf60" class="bulleted-list"><li style="list-style-type:disc">Edited using dynamic B-roll, gameplay clips, and memes</li></ul><ul id="1f6ddcaf-ff7b-8064-96a0-d578c888eac1" class="bulleted-list"><li style="list-style-type:disc">Balanced emotional tone with humor and pacing</li></ul><ul id="1f6ddcaf-ff7b-80d6-8380-c4862d7b0bcf" class="bulleted-list"><li style="list-style-type:disc">Designed thumbnail and intro segment for max click-through</li></ul><p id="1f6ddcaf-ff7b-80e7-8a91-c5b3688da8a4" class=""><strong>Challenges Faced:</strong></p><ul id="1f6ddcaf-ff7b-8045-b644-ff75103e0893" class="bulleted-list"><li style="list-style-type:disc">Sourcing high-quality clips across years of content</li></ul><ul id="1f6ddcaf-ff7b-80fa-9056-ef53eceb97d4" class="bulleted-list"><li style="list-style-type:disc">Maintaining viewer retention over a 5+ minute tribute</li></ul><p id="1f6ddcaf-ff7b-8027-b28d-da1ad1ae8025" class="">
+</p></div></div><p id="1f5ddcaf-ff7b-8045-ac17-fb0c73484465" class="">
+</p><hr id="1f5ddcaf-ff7b-80b8-b7b0-f3e422839d0a"/><h2 id="1f5ddcaf-ff7b-800f-87c5-c9a4911a87bc" class=""><mark class="highlight-brown">Short Form Content ( Shorts &amp; Reels )</mark></h2><div id="1f5ddcaf-ff7b-8098-9e83-f26771b62ccf" class="column-list"><div id="1f6ddcaf-ff7b-8040-876a-f143ef105cc4" style="width:25.806451612903224%" class="column"><figure id="1f6ddcaf-ff7b-80a7-b377-c929545baa7d"><div class="source"><a href="ezyZip.mp4">attachment:bfc36574-b962-4ad9-b9f6-b093db6c03a8:ezyZip.mp4</a></div></figure></div><div id="1f5ddcaf-ff7b-8051-b502-f31326be85b7" style="width:24.88479262672812%" class="column"><h3 id="1f5ddcaf-ff7b-80e4-95b5-ec7c6d75d82b" class="">Short Video Ads (vertical)</h3><p id="1f5ddcaf-ff7b-8085-9d3d-e42e436dcf69" class="">I created a decent-paced, mouth-watering burger ad designed for Instagram and YouTube Shorts. The goal was to showcase the <em>crunch, sizzle,</em> and <em>freshness</em> in under 15 seconds while triggering instant cravings.</p><p id="1f6ddcaf-ff7b-80aa-8932-d29b55f4d2a3" class=""><strong>My Role:</strong></p><ul id="1f6ddcaf-ff7b-808b-9e37-d04f446d0f91" class="bulleted-list"><li style="list-style-type:disc">Edited clips with ASMR-style sound design (sizzles, crunches).</li></ul><ul id="1f6ddcaf-ff7b-8080-8b4e-e4da542207e9" class="bulleted-list"><li style="list-style-type:disc">Used kinetic text and punchy transitions to highlight ingredients.</li></ul><ul id="1f6ddcaf-ff7b-80fe-9505-fdabd2728a8d" class="bulleted-list"><li style="list-style-type:disc">Timed cuts perfectly to music beats for dopamine-packed pacing.</li></ul><ul id="1f6ddcaf-ff7b-8038-9d43-cea0b14c30a3" class="bulleted-list"><li style="list-style-type:disc">Color graded to enhance visual appetite appeal.</li></ul><ul id="1f6ddcaf-ff7b-80a6-9e2a-d43450d35b01" class="bulleted-list"><li style="list-style-type:disc">Added Animations for Call-for-Action and for showcasing new entry of burger.</li></ul><p id="1f6ddcaf-ff7b-803d-bf66-f63bd97304be" class="">
+</p></div><div id="1f6ddcaf-ff7b-80ba-a23c-d40e5a1f80b5" style="width:25.806451612903224%" class="column"><figure id="1f6ddcaf-ff7b-80d5-85ef-e9ec36fd9f08" class="image"><a href="oardefault.avif"><img style="width:327.45001220703125px" src="oardefault.avif"/></a></figure></div><div id="1f5ddcaf-ff7b-8099-9721-fc75be7df6e2" style="width:23.50230414746546%" class="column"><h3 id="1f5ddcaf-ff7b-809d-910b-e1afa845d7b8" class="">Short Narrative Video (vertical)</h3><p id="1f5ddcaf-ff7b-80da-b0e3-d010340a8362" class="">This was a short-form vertical narrative designed for platforms like Instagram Reels and YouTube Shorts. The goal was to tell a compelling mini-story within 60 seconds, blending B-roll visuals with emotional beats to grab attention fast and leave impact.</p><p id="1f5ddcaf-ff7b-803f-a722-eb3e4584ee8a" class=""><strong>My Role:</strong></p><ul id="1f6ddcaf-ff7b-805f-9c51-ccb04e297276" class="bulleted-list"><li style="list-style-type:disc">Handled everything from pre-production planning to post-production polish.</li></ul><ul id="1f6ddcaf-ff7b-8042-8cbd-c43c0355ca05" class="bulleted-list"><li style="list-style-type:disc">Synced background music and effects to match emotional beats and elevate mood.</li></ul><ul id="1f6ddcaf-ff7b-806a-ac33-fc5dcef593bd" class="bulleted-list"><li style="list-style-type:disc">The format required concise storytelling, smooth pacing, and smart transitions tailored for mobile consumption.</li></ul><p id="1f6ddcaf-ff7b-8084-a4e3-dc29055a4e42" class="">
+</p></div></div><hr id="1f5ddcaf-ff7b-813d-8439-c801ee5b823f"/><h1 id="1f5ddcaf-ff7b-81ce-80e0-e3d16cc15e71" class="">More Work Examples</h1><hr id="1f5ddcaf-ff7b-81ec-9706-e53eee9e2f67"/><div id="1f5ddcaf-ff7b-81a1-bb73-f5e4f15540ba" class="collection-content"><h4 class="collection-title">Portfolio Items</h4><table class="collection-content"><thead><tr><th><span class="icon property-icon"><svg aria-hidden="true" role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(71, 70, 68, 0.6);flex-shrink:0" class="typesTitle"><path d="M0.637695 13.1914C1.0957 13.1914 1.32812 13 1.47852 12.5215L2.24414 10.3887H6.14746L6.90625 12.5215C7.05664 13 7.2959 13.1914 7.74707 13.1914C8.22559 13.1914 8.5332 12.9043 8.5332 12.4531C8.5332 12.2891 8.50586 12.1523 8.44434 11.9678L5.41602 3.79199C5.2041 3.21777 4.82129 2.9375 4.19922 2.9375C3.60449 2.9375 3.21484 3.21777 3.0166 3.78516L-0.0322266 12.002C-0.09375 12.1797 -0.121094 12.3232 -0.121094 12.4668C-0.121094 12.918 0.166016 13.1914 0.637695 13.1914ZM2.63379 9.12402L4.17871 4.68066H4.21973L5.76465 9.12402H2.63379ZM12.2793 13.2324C13.3115 13.2324 14.2891 12.6787 14.7129 11.8037H14.7402V12.5762C14.7471 12.9863 15.0273 13.2393 15.4238 13.2393C15.834 13.2393 16.1143 12.9795 16.1143 12.5215V8.00977C16.1143 6.49902 14.9658 5.52148 13.1543 5.52148C11.7666 5.52148 10.6592 6.08887 10.2695 6.99121C10.1943 7.15527 10.1533 7.3125 10.1533 7.46289C10.1533 7.81152 10.4062 8.04395 10.7686 8.04395C11.0215 8.04395 11.2129 7.94824 11.3496 7.73633C11.7529 6.99121 12.2861 6.65625 13.1064 6.65625C14.0977 6.65625 14.6992 7.20996 14.6992 8.1123V8.67285L12.5664 8.7959C10.7686 8.8916 9.77734 9.69824 9.77734 11.0107C9.77734 12.3369 10.8096 13.2324 12.2793 13.2324ZM12.6621 12.1387C11.8008 12.1387 11.2129 11.667 11.2129 10.9561C11.2129 10.2725 11.7598 9.82129 12.7578 9.75977L14.6992 9.62988V10.3203C14.6992 11.3457 13.7969 12.1387 12.6621 12.1387Z"></path></svg></span>Name</th></tr></thead><tbody><tr id="1f5ddcaf-ff7b-810e-bac6-d954a35a8df7"><td class="cell-title"><a href="https://www.notion.so/Influencer-Post-Carousal-Design-1f5ddcafff7b810ebac6d954a35a8df7?pvs=21"><img class="icon" src="https://www.notion.so/icons/postage-stamp_gray.svg"/>Influencer Post  Carousal Design</a></td></tr><tr id="1f5ddcaf-ff7b-8147-b210-f870c374462d"><td class="cell-title"><a href="https://www.notion.so/Cleaning-Service-Website-Design-1f5ddcafff7b8147b210f870c374462d?pvs=21"><img class="icon" src="https://www.notion.so/icons/cake_gray.svg"/>Cleaning Service Website Design</a></td></tr><tr id="1f5ddcaf-ff7b-8187-b9c3-f0ca106abd82"><td class="cell-title"><a href="https://www.notion.so/E-commerce-Pitch-Deck-Presentation-Designer-1f5ddcafff7b8187b9c3f0ca106abd82?pvs=21"><img class="icon" src="https://www.notion.so/icons/library_gray.svg"/>E-commerce Pitch Deck Presentation Designer</a></td></tr><tr id="1f5ddcaf-ff7b-81da-8b96-c38e2249ddd8"><td class="cell-title"><a href="https://www.notion.so/Appco-Mobile-App-Landing-Page-Design-1f5ddcafff7b81da8b96c38e2249ddd8?pvs=21"><img class="icon" src="https://www.notion.so/icons/metronome_gray.svg"/>Appco Mobile App Landing Page Design</a></td></tr><tr id="1f5ddcaf-ff7b-81a6-b3dd-cbba7ec761e6"><td class="cell-title"><a href="https://www.notion.so/Itech-Moile-App-Website-Design-1f5ddcafff7b81a6b3ddcbba7ec761e6?pvs=21"><img class="icon" src="https://www.notion.so/icons/create_gray.svg"/>Itech Moile App Website Design</a></td></tr><tr id="1f5ddcaf-ff7b-816e-815e-eddf17e02718"><td class="cell-title"><a href="https://www.notion.so/Sehat-Recover-Website-Design-WordPress-1f5ddcafff7b816e815eeddf17e02718?pvs=21"><img class="icon" src="https://www.notion.so/icons/eject_gray.svg"/>Sehat Recover Website Design (WordPress)</a></td></tr></tbody></table><br/><br/></div><p id="1f6ddcaf-ff7b-80d5-84e7-c1e1da212d78" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
