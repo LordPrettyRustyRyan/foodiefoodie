@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+} 
+
+body {
+  background-image: url('../images/board.jpg');
+  background-size: cover;
+}
+
+nav{
+  display: flex;
+  height: 70px;
+  width: 100%;
+background: linear-gradient(to right, #FCA311, #ff6700, #f15025);
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 ;
+  flex-wrap: wrap;
+}
+nav .logo{
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+}
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li{
+  margin: 0 5px;
+}
+nav ul li a{
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+nav ul li a.active,
+nav ul li a:hover{
+  color: #111;
+  background: #fff;
+}
+nav .menu-btn i{
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"]{
+  display: none;
+}
+@media (max-width: 1000px){
+  nav{
+    padding: 0 40px 0 50px;
+  }
+}
+@media (max-width: 920px) {
+  nav .menu-btn i{
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  nav ul{
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #111;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+      z-index: 999; /* Big number = on top of everything */
+
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul{
+    left: 0;
+  }
+  nav ul li{
+    width: 100%;
+      z-index: 998; /* Big number = on top of everything */
+
+    margin: 40px 0;
+  }
+  nav ul li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+      z-index: 999; /* Big number = on top of everything */
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a{
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    background: none;
+    color: cyan;
+  }
+}
+.content{
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+
+
+        .card-section {
+            background-color: none;
+            padding: 60px 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Centered card */
+        .card {
+  background-image: url(../images/card.jpg);
+            padding: 30px;
+            width: 60%;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+        }
+
+        /* Breadcrumb navigation */
+        .breadcrumb {
+            font-size: 14px;
+            color: white;
+            font-weight: bold;
+            justify-content: center;
+        }
+
+        .breadcrumb a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        /* Title */
+        .title {
+            font-size: 36px;
+            font-weight: bold;
+            margin: 10px 0;
+            color: white;
+        }
+
+        /* Subtitle */
+        .subtitle {
+            font-size: 16px;
+            color: white;
+            line-height: 1.6;
+        }
+
+
+        .search-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .search-container input {
+            width: 700px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .search-container button {
+            padding: 10px 60px;
+            margin-left: 5px;
+            background-color: #ff6700;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .alphabet-buttons {
+            margin-bottom: 20px;
+        }
+        .alphabet-buttons button {
+            padding: 8px 12px;
+            margin: 3px;
+            border: none;
+font-weight: 600;
+            cursor: pointer;
+font-size: 16px;
+        }
+        .disabled {
+            color: #bbb;
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+        .ingredients-section {
+            margin-top: 20px;
+            display: grid;
+            gap: 15px;
+            padding: 20px;
+            max-width: 1000px;
+            margin: auto;
+            text-align: left;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .ingredients-section h2 {
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+	    color: white;
+        }
+	.ingredients-list {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr); /* 4 columns */
+	gap: 15px;
+	margin-top: 10px;
+	}
+
+	.ingredients-list a {
+	    text-decoration: none;
+	    color: white;
+	    font-size: 16px;
+font-weight: 600;
+            padding: 8px 12px;
+	    border-radius: 4px;
+            background-color: none;
+	transition: background 0.3s;
+	}
+
+	.ingredients-list a:hover {
+	    background-color: #eee !important;
+}
+
+
+.custom-select {
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  font-size: 15px;
+  transition: all 0.3s ease-in-out;
+  margin-left: 4px;
+}
+
+.custom-select:hover,
+.custom-select:focus {
+  border-color: #ff9800;
+  box-shadow: 0 0 8px rgba(255, 152, 0, 0.6);
+  outline: none;
+  background: #fffefb;
+}

@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Navbar */
+.header_section {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 80px;
+    z-index: 1000;
+    transition: background 0.3s ease-in-out;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e0e0e0; /* light gray */
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05); /* optional soft shadow */
+    backdrop-filter: blur(10px); /* Blur effect */
+}
+
+/* Default Navbar Background (Transparent) */
+.header_section {
+    background: transparent;
+}
+
+.customnavcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Pushes items to the edges */
+    width: 100%;
+    padding: 15px 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Navbar Brand (Left) */
+.navbar-brand {
+    margin-left: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: Poppins;
+    text-decoration: none;
+    color: #FCA311;
+}
+
+.navbar-brand p{
+    font-size: 14px;
+    color: #14213D;
+}
+
+/* User Options & Sidebar (Right Side) */
+.nav-right {
+    display: flex;
+    font-family: Poppins;
+    align-items: center;
+    gap: 20px; /* Space between links and menu button */
+    color: #FCA311;
+    gap:30px;
+
+}
+
+/* User Option Links */
+.User_option a {
+    color: #FCA311;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+    padding: 10px;
+}
+
+.User_option a:hover {
+    color: #ffd700;
+}
+
+.search-bar {
+    margin: 0 20px;
+    padding: 5px;
+    border-radius: 4px;
+font-size: 18px;
+width: 500px;
+  border-color: #ff9800;
+  vertical-align: middle;
+}
+
+        #noti {
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+    border-radius: 50%;
+vertical-align: middle;
+margin-right: 15px;
+margin-left: 200px;
+        }
+
+.post-link {
+  text-decoration: none;
+}
+
+#post {
+  margin-right: 4px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.post-text {
+  font-size: 20px;
+  vertical-align: middle;
+}
+
+.profile-btn {
+margin-left: 15px;
+    display: flex; /* Make the button a flex container */
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer; /* Indicates it's clickable */
+    display: inline-block; /* Keeps it inline with other elements */
+    justify-content: center;
+    align-content: center;
+vertical-align: middle;
+}
+.profile-btn img {
+    width: 40px; /* You can adjust the size of the image */
+    height: 40px;
+    border-radius: 50%; /* Makes it circular */
+vertical-align: middle;
+}
+
+.user-pic, .user-pic-lg {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.user-pic-lg {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.profile-dropdown {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  width: 260px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  padding: 15px;
+  font-family: sans-serif;
+  z-index: 1000;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+
+.profile-dropdown.show {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dropdown-top {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.profile-name {
+  font-weight: bold;
+  margin: 0;
+}
+
+.username {
+  color: gray;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.profile-dropdown a {
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+  border-radius: 5px;
+}
+
+.profile-dropdown .one {
+  transition: background-color 0.2s ease;
+}
+.profile-dropdown .one:hover {
+  background-color: #f2f2f2;
+}
+
+.beta {
+  color: red;
+  font-weight: bold;
+  font-size: 10px;
+  vertical-align: middle;
+}
+
+.contentbody {
+  display: flex;
+  transition: all 0.3s ease;
+}
+
+.sidebar {
+  width: 250px;
+  background: #fff;
+  border-right: 1px solid #ddd;
+  transition: width 0.3s ease;
+  position: relative;
+  padding: 10px;
+  top: 80px;
+  min-height: 100vh;
+}
+
+.sidebar.collapsed {
+  width: 65px;
+}
+
+.toggle-btn {
+  position: absolute;
+  top: 10px;
+  right: -15px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.sidebar-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.sidebar-section a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  padding: 6px 10px;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+.sidebar-section a:hover {
+  background: #f0f0f0;
+}
+
+.icon {
+  margin-right: 12px;
+  font-size: 18px;
+}
+
+.avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.label {
+  transition: opacity 0.2s;
+}
+
+.sidebar.collapsed .label {
+  display: none;
+}
+
+.section-title {
+  font-size: 12px;
+  color: gray;
+  margin: 10px 0 5px;
+  text-transform: uppercase;
+}
+
+.sidebar.collapsed .section-title {
+  display: none;
+}
+
+.sidebar.collapsed ~ .main-content {
+  margin-left: 60px;
+}
+
+.maincontent {
+  display: flex;
+  margin-top: 80px;
+  min-height: auto;
+  flex-grow: 1;
+  padding: 20px;
+  transition: all 0.3s ease, margin-top 0.3s ease;
+    justify-content: centeflex-startr;
+    flex-direction: row;
+background-image: url(../images/body-bg.jpg);
+}
+.index{
+top : 80px;
+
+}
+.notif-title {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #212529;
+}
+
+.notif-desc {
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin-top: 2px;
+}
+
+.notif-time {
+  font-size: 0.8rem;
+  color: #999;
+}
+
+.notification:hover {
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  transition: 0.2s;
+  cursor: pointer;
+}
