@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/u&d.css">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>        <!--https://boxicons.com/ -->
+
+    <title>Just Post It</title>
+</head>
+
+<body>
+
+<header class="header_section">
+    <nav class="customnavcontainer">
+        <a class="navbar-brand" href="home.php">
+            <span>Foodie Foodie</span>
+        </a>
+
+        <div class="nav-right"> <!-- New wrapper for alignment -->
+            <div class="User_option">
+		<input type="text" class="search-bar" placeholder="Search Foodie....">
+<!--
+                <img id="noti" src="images/icons/icon4.png" alt="Notifications"></a>
+-->
+                <a href="login.php" class="post-link">
+		<img id="post" src="images/icons/icon5.png" alt="Post">
+ 		<span class="post-text">Post</span>
+		</a>
+
+                <button id="profile-btn" class="profile-btn" onclick="toggleDropdown()">
+		<img src="images/profile.jpg" alt="Profile">
+		</button>
+
+<!-- Dropdown Menu 
+<div class="profile-dropdown" id="profileDropdown">
+  <div class="dropdown-top">
+    <img src="images/profile.jpg" alt="User" class="user-pic-lg">
+    <div>
+      <p class="profile-name">View Profile</p>
+      <a href="#" class="username" class="none">u/imagine</a>
+    </div>
+  </div>
+  <a href="#" class="one">🧑‍🎨 Edit Profile</a>
+  <a href="#" class="one">🔔 Notifications</a>
+  <a href="#" class="one">🍲 Saved Recipes</a>
+  <a href="#" class="one">🔍 Search</a>
+  <a href="#" class="one">⛉ Saved Blog</a>
+  <a href="#" class="one">🚪 Log Out</a>
+  <hr />
+  <a href="#" class="one">🎯 Advertise on Site</a>
+  <a href="#" class="one">📊 Try Pro <span class="beta">BETA</span></a>
+  <a href="#" class="one">⚙️ Settings</a>
+  <a href="#" class="one">💎 Premium</a>
+</div>-->
+            </div>
+        </div>
+    </nav>
+
+</header>
+
+<div class="contentbody">
+<div class="sidebar" id="sidebar">
+  <button id="toggleBtn" class="toggle-btn">☰</button>
+
+  <div class="sidebar-section">
+    <a href="home.php"><span class="icon">🏠</span> <span class="label">Home</span></a>
+    <a href="recipe.php"><span class="icon">📈</span> <span class="label">Popular Recipes</span></a>
+    <a href="recipe.php"><span class="icon">👥</span> <span class="label">Explore Recipes</span></a>
+    <a href="recipe.php"><span class="icon">📊</span> <span class="label">All Recipes</span></a>
+    <a href="s.php"><span class="icon">🔍</span> <span class="label">Search</span></a>
+    <a href="auth.php"><span class="icon">🚪</span> <span class="label">Log Out</span></a>
+  </div>
+
+</div>
+
+<div class="maincontent" id="mainContent">
+
+<div class="area">
+<h1><strong>Our Home Feed</strong></h1>
+</div>
+
+</div>
+
+    <script src="js/u&d.js"></script>
+</body>
+
+</html>
